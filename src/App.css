@@ -1,0 +1,8 @@
+.the-form {
+    width: 20rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 5px;
+}
