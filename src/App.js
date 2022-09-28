@@ -77,7 +77,7 @@ class App extends React.Component {
     }
   };
 
-  handleSubmit = () => {
+  handleSubmit = () => { // desenvolvida após a mentoria do dia 27/09 dada pelo João
     const {
       cardName,
       cardDescription,
@@ -89,7 +89,7 @@ class App extends React.Component {
       cardTrunfo,
     } = this.state;
 
-    const newCard = { // a nova carta é composta do estado atual
+    const newCard = { // armazenamos na nova carta o estado atual
       cardName,
       cardDescription,
       cardImage,
@@ -100,7 +100,7 @@ class App extends React.Component {
       cardTrunfo };
 
     this.setState((estadoAnterior) => ({
-      savedCards: [estadoAnterior.savedCards, newCard], // incorpora nova carta ao estado e altera os campos pedidos
+      savedCards: [estadoAnterior.savedCards, newCard], // incorpora nova carta ao estado e limpa os campos pedidos
       cardName: '',
       cardDescription: '',
       cardImage: '',
@@ -110,6 +110,11 @@ class App extends React.Component {
       cardRare: 'normal',
 
     }));
+  };
+
+  validateTrunfo = () => { // desenvolvida com o auxílio da monitoria
+    const { savedCards } = this.state; // savedCards é uma array! dá pra usar HOF
+    return savedCards.some((singleCard) => singleCard.cardTrunfo); // retorna true se alguma carta tiver a propriedade cardTrunfo = true
   };
 
   render() {
@@ -140,6 +145,7 @@ class App extends React.Component {
           onInputChange={ this.handleChange }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onSaveButtonClick={ this.handleSubmit }
+          hasTrunfo={ this.validateTrunfo() }
         />
         <Card
           cardName={ cardName }
