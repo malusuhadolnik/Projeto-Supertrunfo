@@ -77,7 +77,8 @@ class App extends React.Component {
     }
   };
 
-  handleSubmit = () => { // desenvolvida após a mentoria do dia 27/09 dada pelo João
+  handleSubmit = (e) => { // desenvolvida após a mentoria do dia 27/09 dada pelo João
+    e.preventDefault();
     const {
       cardName,
       cardDescription,
@@ -108,7 +109,7 @@ class App extends React.Component {
       cardAttr2: 0,
       cardAttr3: 0,
       cardRare: 'normal',
-
+      isSaveButtonDisabled: true,
     }));
   };
 
@@ -128,7 +129,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
-      // savedCards,
+      savedCards,
     } = this.state;
 
     return (
@@ -158,22 +159,24 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
         />
-        {/* <div>
+        <div>
           <ul>
             {savedCards.map((singleCard) => (
               <li key={ singleCard.cardName }>
-                {`${singleCard.cardName} 
-                ${singleCard.cardDescription} 
-                ${singleCard.cardImage}
-                ${singleCard.cardAttr1}
-                ${singleCard.cardAttr2}
-                ${singleCard.cardAttr3}
-                ${singleCard.cardRare}
-                ${singleCard.cardTrunfo}`}
+                <Card
+                  cardName={ singleCard.cardName }
+                  cardDescription={ singleCard.cardDescription }
+                  cardImage={ singleCard.cardImage }
+                  cardAttr1={ singleCard.cardAttr1 }
+                  cardAttr2={ singleCard.cardAttr2 }
+                  cardAttr3={ singleCard.cardAttr3 }
+                  cardRare={ singleCard.cardRare }
+                  cardTrunfo={ singleCard.cardTrunfo }
+                />
               </li>
             ))}
           </ul>
-        </div> */}
+        </div>
       </div>
     );
   }
