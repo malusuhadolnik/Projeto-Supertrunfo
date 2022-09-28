@@ -100,7 +100,7 @@ class App extends React.Component {
       cardTrunfo };
 
     this.setState((estadoAnterior) => ({
-      savedCards: [estadoAnterior.savedCards, newCard], // incorpora nova carta ao estado e limpa os campos pedidos
+      savedCards: [...estadoAnterior.savedCards, newCard], // incorpora nova carta ao estado e limpa os campos pedidos
       cardName: '',
       cardDescription: '',
       cardImage: '',
@@ -128,6 +128,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
+      // savedCards,
     } = this.state;
 
     return (
@@ -157,6 +158,22 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
         />
+        {/* <div>
+          <ul>
+            {savedCards.map((singleCard) => (
+              <li key={ singleCard.cardName }>
+                {`${singleCard.cardName} 
+                ${singleCard.cardDescription} 
+                ${singleCard.cardImage}
+                ${singleCard.cardAttr1}
+                ${singleCard.cardAttr2}
+                ${singleCard.cardAttr3}
+                ${singleCard.cardRare}
+                ${singleCard.cardTrunfo}`}
+              </li>
+            ))}
+          </ul>
+        </div> */}
       </div>
     );
   }
