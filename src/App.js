@@ -118,6 +118,15 @@ class App extends React.Component {
     return savedCards.some((singleCard) => singleCard.cardTrunfo); // retorna true se alguma carta tiver a propriedade cardTrunfo = true
   };
 
+  removeCard = ({ target }) => {
+    console.log(target);
+    const { savedCards } = this.state;
+    const removeTarget = savedCards.filter((card) => card.cardName !== target.id);
+    this.setState({
+      savedCards: removeTarget,
+    });
+  };
+
   render() {
     const {
       cardName,
@@ -173,6 +182,14 @@ class App extends React.Component {
                   cardRare={ singleCard.cardRare }
                   cardTrunfo={ singleCard.cardTrunfo }
                 />
+                <button
+                  data-testid="delete-button"
+                  id={ singleCard.cardName }
+                  type="button"
+                  onClick={ this.removeCard }
+                >
+                  Excluir
+                </button>
               </li>
             ))}
           </ul>
