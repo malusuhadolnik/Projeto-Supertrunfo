@@ -16,6 +16,7 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
+      savedCards: [],
     };
   }
 
@@ -76,6 +77,41 @@ class App extends React.Component {
     }
   };
 
+  handleSubmit = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardRare,
+      cardTrunfo,
+    } = this.state;
+
+    const newCard = { // a nova carta é composta do estado atual
+      cardName,
+      cardDescription,
+      cardImage,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardRare,
+      cardTrunfo };
+
+    this.setState((estadoAnterior) => ({
+      savedCards: [estadoAnterior.savedCards, newCard], // incorpora nova carta ao estado e altera os campos pedidos
+      cardName: '',
+      cardDescription: '',
+      cardImage: '',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
+      cardRare: 'normal',
+
+    }));
+  };
+
   render() {
     const {
       cardName,
@@ -103,6 +139,7 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           onInputChange={ this.handleChange }
           isSaveButtonDisabled={ isSaveButtonDisabled }
+          onSaveButtonClick={ this.handleSubmit }
         />
         <Card
           cardName={ cardName }
