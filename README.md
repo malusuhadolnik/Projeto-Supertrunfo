@@ -1,7 +1,7 @@
 # Projeto Supertrunfo -  :construction: Em Construção!  :construction:
 
 # Sobre
-Este projeto foi desenvolvido durante o Módulo 2 - Front-End do curso de Desenvolvimento Web da Trybe. 
+Este projeto foi desenvolvido durante o Módulo 2 - Front-End do curso de Desenvolvimento Web da Trybe. Atualmente estou fazendo algumas modificações.
 
 Neste projeto foi desenvolvido um jogo no estilo Super Trunfo, em que a pessoa usuária pode criar um baralho com o tema livre; adicionar e remover cartas; 
 e visualizar todo o baralho.
