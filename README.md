@@ -1,13 +1,28 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto Supertrunfo -  :construction: Em Construção!  :construction:
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# Sobre
+Este projeto foi desenvolvido durante o Módulo 2 - Front-End do curso de Desenvolvimento Web da Trybe. 
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Neste projeto foi desenvolvido um jogo no estilo Super Trunfo, em que a pessoa usuária pode criar um baralho com o tema livre; adicionar e remover cartas; 
+e visualizar todo o baralho.
+
+Os arquivos desenvolvidos por mim estão na pasta src, com exceção de setupTests.js
+
+Os demais foram desenvolvidos pelo time da Trybe.
+
+## Técnologias usadas
+
+React.js, Javascript.
+
+## Instalando Dependências
+
+```bash
+cd src/
+npm install
+``` 
+
+## Executando aplicação
+
+  ```
+    cd src/ && npm start
+  ```
