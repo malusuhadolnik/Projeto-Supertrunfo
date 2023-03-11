@@ -1,4 +1,4 @@
-# Projeto Supertrunfo -  :construction: Em Construção!  :construction:
+# Projeto Supertrunfo
 
 # Sobre
 Este projeto foi desenvolvido durante o Módulo 2 - Front-End do curso de Desenvolvimento Web da Trybe. Atualmente estou fazendo algumas modificações.
